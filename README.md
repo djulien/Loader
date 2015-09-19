@@ -25,6 +25,9 @@ function load(pattern, [options], [callback]) {
 - options: an optional object
  - strict: When set to true, glob will yield an error if a pattern matches no files.
  - limit: ensures synchronised loading. *Note that under most use-cases files will be loaded 1 at a time*
+ - sort: custom sort order; passed to sort() function; use "null" for default (alphanumeric) sort
+ - unique: When set to true, glob will yield an error if more than 1 file matches.
+ - noself: Exclude caller's file from matches (useful for recursive searches)
 - callback: an optional callback that is called once per matched file with its ```exports``` and the file’s name.
 
 ## Examples
